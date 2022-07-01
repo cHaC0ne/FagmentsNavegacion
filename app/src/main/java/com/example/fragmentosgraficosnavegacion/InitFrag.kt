@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import com.example.fragmentosgraficosnavegacion.databinding.FragmentInitBinding
 
@@ -12,6 +13,7 @@ import com.example.fragmentosgraficosnavegacion.databinding.FragmentInitBinding
 class InitFrag : Fragment() {
     private var b: FragmentInitBinding? = null
     private val binding get() = b!!
+    private var cont = 0
 
 
 
@@ -27,11 +29,19 @@ class InitFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         b!!.bFragInit1.setOnClickListener {
-            view.findNavController().navigate(R.id.action_initFrag_to_fristFrag, null)
+            val bundle = bundleOf("Contador" to cont.toString())
+            view.findNavController().navigate(R.id.action_initFrag_to_fristFrag, bundle)
+
 
         }
         b!!.bFragInit2.setOnClickListener {
             view.findNavController().navigate(R.id.action_initFrag_to_secondFrag)
+        }
+        b!!.tvCOntador.setOnClickListener{
+            cont++
+            b!!.tvCOntador.text = cont.toString()
+
+
         }
     }
 }

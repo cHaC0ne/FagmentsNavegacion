@@ -31,5 +31,6 @@ class SecondFrag : Fragment() {
         b!!.bSecFragAtr.setOnClickListener {
             view.findNavController().navigate(R.id.action_secondFrag_to_initFrag,null)
         }
+
     }
 }
