@@ -32,5 +32,6 @@ class SecondFrag : Fragment() {
             view.findNavController().navigate(R.id.action_secondFrag_to_initFrag,null)
         }
 
+
     }
 }

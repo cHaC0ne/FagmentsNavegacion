@@ -40,8 +40,10 @@ class InitFrag : Fragment() {
         b!!.tvCOntador.setOnClickListener{
             cont++
             b!!.tvCOntador.text = cont.toString()
-
-
+        }
+        b!!.bFragInit2.setOnClickListener {
+            val action = InitFragDirections.actionInitFragToSecondFrag()
+            view.findNavController().navigate(action)
         }
     }
 }
