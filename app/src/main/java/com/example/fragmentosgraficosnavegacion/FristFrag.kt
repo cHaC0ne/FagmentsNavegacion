@@ -19,7 +19,7 @@ class FristFrag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        b = FragmentFristBinding.inflate(layoutInflater)
+        b = FragmentFristBinding.inflate(inflater, container, false)
         return b!!.root
     }
 

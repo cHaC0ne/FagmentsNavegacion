@@ -18,7 +18,7 @@ class ThirdFrag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        b = FragmentThirdBinding.inflate(layoutInflater)
+        b = FragmentThirdBinding.inflate(inflater, container, false)
         return b!!.root
     }
 

@@ -20,7 +20,7 @@ class InitFrag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        b = FragmentInitBinding.inflate(layoutInflater)
+        b = FragmentInitBinding.inflate(inflater, container , false)
         return b!!.root
     }
 

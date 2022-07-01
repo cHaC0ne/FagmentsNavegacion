@@ -19,7 +19,7 @@ class SecondFrag : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        b = FragmentSecondBinding.inflate(layoutInflater)
+        b = FragmentSecondBinding.inflate(inflater, container, false)
         return b!!.root
     }
 
