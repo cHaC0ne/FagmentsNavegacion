@@ -36,6 +36,9 @@ class InitFrag : Fragment() {
         }
         b!!.bFragInit2.setOnClickListener {
             view.findNavController().navigate(R.id.action_initFrag_to_secondFrag)
+            val cont = 32
+            val action = InitFragDirections.actionInitFragToSecondFrag(cont)
+            view.findNavController().navigate(action)
         }
         b!!.tvCOntador.setOnClickListener{
             cont++
