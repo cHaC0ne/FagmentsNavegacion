@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initFrag">
+
+    <fragment
+        android:id="@+id/initFrag"
+        android:name="com.example.fragmentosgraficosnavegacion.InitFrag"
+        android:label="fragment_init"
+        tools:layout="@layout/fragment_init" >
+        <action
+            android:id="@+id/action_initFrag_to_fristFrag"
+            app:destination="@id/fristFrag" />
+        <action
+            android:id="@+id/action_initFrag_to_secondFrag"
+            app:destination="@id/secondFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/fristFrag"
+        android:name="com.example.fragmentosgraficosnavegacion.FristFrag"
+        android:label="fragment_frist"
+        tools:layout="@layout/fragment_frist" >
+        <action
+            android:id="@+id/action_fristFrag_to_initFrag"
+            app:destination="@id/initFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFrag"
+        android:name="com.example.fragmentosgraficosnavegacion.SecondFrag"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFrag_to_thirdFrag"
+            app:destination="@id/thirdFrag" />
+        <action
+            android:id="@+id/action_secondFrag_to_initFrag"
+            app:destination="@id/initFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFrag"
+        android:name="com.example.fragmentosgraficosnavegacion.ThirdFrag"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFrag_to_secondFrag"
+            app:destination="@id/secondFrag" />
+        <action
+            android:id="@+id/action_thirdFrag_to_initFrag"
+            app:destination="@id/initFrag" />
+    </fragment>
+</navigation>
